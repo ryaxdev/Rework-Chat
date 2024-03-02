@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Task Chat",
+                        "Rework Chat",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 24),
                       ),
