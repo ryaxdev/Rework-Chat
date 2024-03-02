@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
-                  height: 100,
+                  height: 105,
                   child: const Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,10 +43,6 @@ class _HomePageState extends State<HomePage> {
                         "Rework Chat",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 24),
-                      ),
-                      Icon(
-                        Icons.image_search,
-                        color: Colors.white,
                       ),
                     ],
                   ),
