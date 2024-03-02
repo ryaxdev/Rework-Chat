@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lottie/lottie.dart';
 import 'package:task_ai/bloc/chat_bloc.dart';
 import 'package:task_ai/models/chat_message_model.dart';
 
@@ -25,16 +24,17 @@ class _HomePageState extends State<HomePage> {
         },
         builder: (context, state) {
           switch (state.runtimeType) {
-            case ChatSuccesState:
+            case const (ChatSuccesState):
             List<ChatMessageModel> messages = (state as ChatSuccesState).messages;
-            return Container(
+            return SizedBox(
             width: double.maxFinite,
             height: double.maxFinite,
             child: Column(
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
-                  height: 105,
+                  height: 100,
+                  margin: const EdgeInsets.only(bottom: 20),
                   child: const Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -71,14 +71,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ));
                 })),
-                if (chatBloc.generating) Row(
-                  children: [
-                    Container(
-                      height: 100,
-                      width: 100,
-                      child: Lottie.asset('assets/loader.json')),
-                  ],
-                ),
+                
                 Container(
 
                   padding:

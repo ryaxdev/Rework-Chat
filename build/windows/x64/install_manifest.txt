@@ -1,0 +1,15 @@
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/icudtl.dat
+E:/programacion/task_ai/build/windows/x64/runner/Debug/flutter_windows.dll
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/assets/loader.json
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/assets/Poppins-Regular.ttf
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/assets/space_bg.jpg
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+E:/programacion/task_ai/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

@@ -10,7 +10,7 @@ class ChatRepo{
       try {
         Dio dio = Dio();
       
-      final response = await dio.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${apiKey}"
+      final response = await dio.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=$apiKey"
       ,
 
       data: {
