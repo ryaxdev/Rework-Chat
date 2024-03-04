@@ -17,21 +17,30 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: BlocConsumer<ChatBloc, ChatState>(
         bloc: chatBloc,
-        listener: (context, state) {
+        listener: (context, state) {},
         
-        },
         builder: (context, state) {
           switch (state.runtimeType) {
             case const (ChatSuccesState):
             List<ChatMessageModel> messages = (state as ChatSuccesState).messages;
-            return SizedBox(
+            
+            return Container(
             width: double.maxFinite,
             height: double.maxFinite,
+            decoration:  const BoxDecoration(
+                    image: DecorationImage(
+                      opacity: 0.1,
+                      image: AssetImage("assets/dsa.jpg"),
+                    fit: BoxFit.cover)
+                  ),
             child: Column(
+              
               children: [
                 Container(
+                  
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   height: 100,
                   margin: const EdgeInsets.only(bottom: 20),
@@ -44,20 +53,26 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 24),
                       ),
+                      Icon(Icons.star)
                     ],
+                    
                   ),
+                  
                 ),
                 Expanded(child:ListView.builder(
                   itemCount: messages.length,
                   itemBuilder: (context, index) {
                   return Container(
+                    
                     margin: const EdgeInsets.only(bottom: 15,right: 15,left: 15),
-                    padding: const EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(18),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(25),
                       color: Colors.white.withOpacity(0.1)
                     ),
+                    
                     child: Column(
+                      
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(messages[index].role == "user" ? "User" : "Chat IA",
@@ -69,11 +84,13 @@ class _HomePageState extends State<HomePage> {
                         Text(messages[index].parts.first.text,
                         style: const TextStyle(height: 1.2),),
                       ],
+                      
                     ));
+                    
                 })),
                 
                 Container(
-
+                  
                   padding:
                       const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
                   child: Row(
@@ -97,32 +114,28 @@ class _HomePageState extends State<HomePage> {
                                 borderSide: BorderSide(
                                     color: Theme.of(context).primaryColor))),
                       )),
-                      const SizedBox(width: 12),
-                      InkWell(
-                        onTap: () {
+                      
+                      SizedBox(
+                        
+                        child: IconButton(
+                          icon: const Icon(Icons.send_rounded),
+                          iconSize: 50,
+                          color: Colors.white,
+                          onPressed: () {
                           if(textEditingController.text.isNotEmpty){
                             String text = textEditingController.text;
                             textEditingController.clear();
                             chatBloc.add(ChatGenerateNewTextMessageEvent(inputMessage: text));
-                          }
-                        },
-                        child: CircleAvatar(
-                          radius: 32,
-                          backgroundColor: Colors.white,
-                          child: CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Theme.of(context).primaryColor,
-                            child: const Center(
-                              child: Icon(Icons.send, color: Colors.white),
-                            ),
+                          }},
+                          
                           ),
-                        ),
-                      )
+                      ),
+                      
                     ],
                   ),
-                ),
-              ],
-            ),
+                ),               
+              ],              
+            ),            
           );
 
             default:
