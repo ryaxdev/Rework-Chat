@@ -97,54 +97,85 @@ class _HomePageState extends State<HomePage> {
                     ));
                     
                 })),
-                
+                        
                 Container(
-                  
                   padding:
-                      const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Expanded(
-                          child: TextField(
-                            controller: textEditingController,
-                        style: const TextStyle(color: Colors.black),
-                        cursorColor: Theme.of(context).primaryColor,
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(100)),
-                            fillColor: Colors.white,
-                            hintText: "Preguntale algo a la IA",
-                            hintStyle: TextStyle(
-                              color: Colors.grey.shade400
-                            ),
-                            
-                            filled: true,
-                            
-                            focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(100),
-                                borderSide: BorderSide(
-                                    color: Theme.of(context).primaryColor)
-                            ), 
-                        ),      
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)
+                          ),
+                          color: const Color.fromARGB(255, 8, 8, 8),
+                          
+                          child: Row(
+                            children: [
+                              InkWell(
+                                borderRadius: BorderRadius.circular(30),
+                                onTap: () {},
+                                child: Ink(
+                                  width: 45,
+                                  height: 45,
+                                  child: const Icon(Icons.emoji_emotions_outlined),
+                                  
+                                ),
+                              ),
+                              Expanded(
+                                child: TextFormField( 
+                                  maxLines: 5,
+                                  minLines: 1,    
+                                  controller: textEditingController,
+                                  decoration: const InputDecoration(
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                              
+                            ],
+                          ),
+                        ),
+                          
                       ),
-                      
-                      ),
-                      
-                      SizedBox(
-                        
-                        child: IconButton(
-                          icon: const Icon(Icons.send_rounded),
-                          iconSize: 50,
-                          color: Colors.white,
-                          onPressed: () {
-                          if(textEditingController.text.isNotEmpty){
+
+                      Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)
+                        ),
+                        color: Colors.blue,
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(30),
+                            onTap: (){
+                              if(textEditingController.text.isNotEmpty){
                             String text = textEditingController.text;
                             textEditingController.clear();
                             chatBloc.add(ChatGenerateNewTextMessageEvent(inputMessage: text));
-                          }},
-                          
+                          }
+                            },
+                            child: const Padding(
+                              padding: EdgeInsets.all(12.0),
+                              child: Icon(Icons.send_rounded),
+                            ),
                           ),
                       ),
+                      
+                      //SizedBox(
+                        
+                      //  child: IconButton(
+                      //    icon: const Icon(Icons.send_rounded),
+                      //    iconSize: 50,
+                      //    color: Colors.white,
+                      //    onPressed: () {
+                      //    if(textEditingController.text.isNotEmpty){
+                      //      String text = textEditingController.text;
+                      //      textEditingController.clear();
+                      //      chatBloc.add(ChatGenerateNewTextMessageEvent(inputMessage: text));
+                      //    }},
+                          
+                      //    ),
+                      //),
                       
                     ],
                   ),
