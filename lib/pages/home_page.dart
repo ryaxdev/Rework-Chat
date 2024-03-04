@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_ai/bloc/chat_bloc.dart';
 import 'package:task_ai/models/chat_message_model.dart';
+import 'package:task_ai/pages/web_view_container.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,7 +18,21 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(
+        title: const Text(
+          'Rework Chat',
+          style: TextStyle(fontSize: 24),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.coffee_rounded),
+            onPressed: () {
+              Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const WebViewContainer()));
+            }
+          )
+        ],
+      ),
       body: BlocConsumer<ChatBloc, ChatState>(
         bloc: chatBloc,
         listener: (context, state) {},
@@ -27,37 +42,17 @@ class _HomePageState extends State<HomePage> {
             case const (ChatSuccesState):
             List<ChatMessageModel> messages = (state as ChatSuccesState).messages;
             
-            return Container(
+            return SizedBox(
             width: double.maxFinite,
             height: double.maxFinite,
-            decoration:  const BoxDecoration(
-                    image: DecorationImage(
-                      opacity: 0.1,
-                      image: AssetImage("assets/dsa.jpg"),
-                    fit: BoxFit.cover)
-                  ),
+            
             child: Column(
               
               children: [
-                Container(
-                  
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  height: 100,
-                  margin: const EdgeInsets.only(bottom: 20),
-                  child: const Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Rework Chat",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 24),
-                      ),
-                      Icon(Icons.star)
-                    ],
-                    
-                  ),
-                  
+                
+                const SizedBox(
+                  width: 15.0,
+                  height: 15.0,
                 ),
                 Expanded(child:ListView.builder(
                   itemCount: messages.length,
@@ -108,12 +103,18 @@ class _HomePageState extends State<HomePage> {
                             hintStyle: TextStyle(
                               color: Colors.grey.shade400
                             ),
+                            
                             filled: true,
+                            
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(100),
                                 borderSide: BorderSide(
-                                    color: Theme.of(context).primaryColor))),
-                      )),
+                                    color: Theme.of(context).primaryColor)
+                            ), 
+                        ),      
+                      ),
+                      
+                      ),
                       
                       SizedBox(
                         

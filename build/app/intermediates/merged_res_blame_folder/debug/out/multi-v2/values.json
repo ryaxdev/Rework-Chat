@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.task_ai.app-mergeDebugResources-9:/values/values.xml",
+            "outputFile": "com.example.task_ai.app-mergeDebugResources-10:/values/values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-3\\032f4dff274e516110d9363a9793a3e3\\transformed\\jetified-window-1.0.0-beta04\\res\\values\\values.xml",
