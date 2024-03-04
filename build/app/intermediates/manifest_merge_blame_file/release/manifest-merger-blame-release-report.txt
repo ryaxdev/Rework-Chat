@@ -41,8 +41,8 @@
 29-->[androidx.core:core:1.6.0] C:\Users\USER\.gradle\caches\transforms-3\2579a7de00054bf46a8dbc332552f622\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 30        android:icon="@mipmap/ic_launcher"
 30-->E:\programacion\task_ai\android\app\src\main\AndroidManifest.xml:8:9-43
-31        android:label="task_ai" >
-31-->E:\programacion\task_ai\android\app\src\main\AndroidManifest.xml:6:9-32
+31        android:label="Rework Chat" >
+31-->E:\programacion\task_ai\android\app\src\main\AndroidManifest.xml:6:9-36
 32        <activity
 32-->E:\programacion\task_ai\android\app\src\main\AndroidManifest.xml:9:9-29:20
 33            android:name="com.example.task_ai.MainActivity"

@@ -10,7 +10,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\US
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\USER\.gradle\caches\transforms-3\2579a7de00054bf46a8dbc332552f622\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from E:\programacion\task_ai\android\app\src\main\AndroidManifest.xml:6:9-32
+		ADDED from E:\programacion\task_ai\android\app\src\main\AndroidManifest.xml:6:9-36
 	android:icon
 		ADDED from E:\programacion\task_ai\android\app\src\main\AndroidManifest.xml:8:9-43
 	android:name

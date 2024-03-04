@@ -1687,4 +1687,4 @@ The root reachable resources are:
  style:LaunchTheme:2131361792
  style:NormalTheme:2131361793
 Skipped unused resource res/layout/custom_dialog.xml: 828 bytes (replaced with small dummy file of size 9 bytes)
-Resource shrinking did not work (grew from 30180 to 30200); using original instead
+Resource shrinking did not work (grew from 30183 to 30203); using original instead
