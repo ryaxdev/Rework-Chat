@@ -19,10 +19,24 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
         title: const Text(
           'Rework Chat',
-          style: TextStyle(fontSize: 24),
+          style: TextStyle(fontSize: 25,),
+          
         ),
+        titleSpacing: 00.0,
+        centerTitle: true,
+        toolbarHeight: 60.2,
+        toolbarOpacity: 0.8,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(25),
+              bottomLeft: Radius.circular(25)),
+        ),
+        elevation: 0.00,
+        backgroundColor: Colors.grey[900],
+        
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.coffee_rounded),
