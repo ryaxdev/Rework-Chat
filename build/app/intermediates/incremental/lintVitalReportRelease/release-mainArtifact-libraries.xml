@@ -4,6 +4,19 @@
       jars="E:\programacion\task_ai\build\app\intermediates\flutter\release\libs.jar"
       resolved="__local_aars__:E:\programacion\task_ai\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
   <library
+      name="E:\programacion\task_ai\android@@:permission_handler_android::release"
+      jars="E:\programacion\task_ai\build\permission_handler_android\.transforms\91feda2a3150eb052a2f55bf55337721\transformed\out\jars\classes.jar;E:\programacion\task_ai\build\permission_handler_android\.transforms\91feda2a3150eb052a2f55bf55337721\transformed\out\jars\libs\R.jar"
+      resolved="com.baseflow.permissionhandler:permission_handler_android:unspecified"
+      folder="E:\programacion\task_ai\build\permission_handler_android\.transforms\91feda2a3150eb052a2f55bf55337721\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="E:\programacion\task_ai\android@@:webview_flutter_android::release"
       jars="E:\programacion\task_ai\build\webview_flutter_android\.transforms\35ed74364790433e5b9792b4fd3b51ca\transformed\out\jars\classes.jar;E:\programacion\task_ai\build\webview_flutter_android\.transforms\35ed74364790433e5b9792b4fd3b51ca\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.webviewflutter:webview_flutter_android:unspecified"
